@@ -1,5 +1,4 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAILURE } from '../actions/Actions';
-import { AST_False } from 'terser';
 
 const initialState = {
     spells: [],
@@ -26,7 +25,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 error: action.payload,
-                isFetching: AST_False
+                isFetching: false
             };
         default:
             return state;
